@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  apimon-web:
+    volumes:
+      - ./src/public:/var/www/html/public
+    env_file:
+        - ./environment/development.env
+    ports:
+        - 8083:80
+
+  apimon-phpfpm:
+    volumes:
+        - ./src:/var/www/html
+    env_file:
+        - ./environment/development.env

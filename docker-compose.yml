@@ -1,0 +1,56 @@
+version: '2'
+
+services:
+
+
+  ##
+  # Scheduling service
+  #
+  apimon-scheduler:
+    image: wenbinf/ndscheduler
+    ports:
+        - 8081:8888
+
+  ##
+  # PHP Processing.
+  #
+  apimon-phpfpm:
+    build:
+        context: .
+        dockerfile: ./containers/phpfpm/Dockerfile
+
+  ##
+  # Message Queue
+  #
+  apimon-msgq:
+      image: rabbitmq:3-management
+      restart: unless-stopped
+      ports:
+          - 8082:15672
+          - 15672:15672
+
+  ##
+  # redis
+  #
+  apimon-redis:
+    image: redis
+    restart: unless-stopped
+    env_file:
+        - ./environment/redis.env
+    volumes:
+      - ./store/redis:/data
+
+  apimon-redismanager:
+      image: dmportella/redis-commander
+      restart: unless-stopped
+
+
+  ##
+  # Front end web application
+  #
+  apimon-web:
+    build:
+        context: .
+        dockerfile: ./containers/web/Dockerfile
+    depends_on:
+        - apimon-phpfpm

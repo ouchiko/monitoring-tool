@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  apimon-web:
+    volumes:
+      - ./src/public:/var/www/html/public
+    env_file:
+        - ./environment/production.env
+    ports:
+        - 80:80
+    restart: always
+
+  apimon-phpfpm:
+    volumes:
+        - ./src:/var/www/html
+    env_file:
+        - ./environment/production.env
+    restart: always
