@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Departure Board</title>
+    <link rel="stylesheet" href="/assets/trains-bundle.css">
+</head>
+<body class="departure-board">
+    <div class="container">
+        <div class="title">Departure Table for {{crs_code}}</div>
+        <table class="departure--table">
+            <tr class="departure--titles">
+                <th>Starts</th>
+                <th>Destination</th>
+                <th>Scheduled</th>
+                <th>Estimated</th>
+                <th>Platform</th>
+                <th>Carriages</th>
+                <th>Delay (mins)</th>
+            </tr>
+            {% for item in dataset.GetStationBoardResult.trainServices.service %}
+            <tr class="depature--item status--{{item.color_flag}}" data-service-id="{{item.myServiceID}}">
+                <td>{{ item.origin.location.locationName }}</td>
+                <td>{{ item.destination.location.locationName }}</td>
+                <td class="center">{{ item.std }}</td>
+                <td class="center">{{ item.etd }}</td>
+                <td class="center">{{ item.platform }}</td>
+                <td class="center">{{ item.length }}</td>
+                <td class="center">{{ item.delay }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

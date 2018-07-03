@@ -6,7 +6,7 @@ return [
 
         // Renderer settings
         'renderer' => [
-            'template_path' => __DIR__ . '/hotelmap/views/',
+            'template_path' => __DIR__ . '/../trains/views/',
         ],
 
         // Monolog settings
@@ -16,17 +16,11 @@ return [
             'level' => \Monolog\Logger::DEBUG,
         ],
         'db' => [
-            "development" => [
-                "host" => "mysql-primarydb.prod.hotelmap.com",
-                "user" => "worker_dev",
-                "pass" => "AA4sHBJhQDYF73V",
-                "dbname" => "HotelMapWorldWide"
-            ],
-            "production" => [
-                "host" => "mysql-primarydb.prod.hotelmap.com",
-                "user" => "worker",
-                "pass" => "8lMGMyf0sFeeoIuJvQetEsaVomFk3xbC",
-                "dbname" => "HotelMapWorldWide"
+            "default" => [
+                "host" => "train-mysql",
+                "user" => "trains",
+                "pass" => "trains",
+                "dbname" => "trains"
             ]
         ]
     ],

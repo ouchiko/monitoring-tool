@@ -1,9 +1,9 @@
 <?php
 /**
- * HotelMap Data API Service.
- * You shouldn't be here..  Look in src/hotelmap for:
- *   - routes, controllers and models.
+ * WATERHELL.COM
  */
+date_default_timezone_set('Europe/London');
+
 if (PHP_SAPI == 'cli-server') {
     // To help the built-in PHP dev server, check if the request was actually for
     // something which should probably be served as a static file
@@ -20,6 +20,8 @@ if ($_GET['debugsentry']) {
 } else {
     ini_set("display_errors","off");
 }
+// error_reporting(E_ALL);
+// ini_set("display_errors","on");
 
 
 require __DIR__ . '/../vendor/autoload.php';    /* Vendor autoloader */
@@ -32,7 +34,7 @@ $settings = require __DIR__ . '/../app/configuration/dep_settings.php';
 $app = new \Slim\App($settings);
 
 require __DIR__ . '/../app/configuration/dep_db.php';       /* DB Container */
-require __DIR__ . '/../app/configuration/dep_sentry.php';         /* Sentry Tracing */
+//require __DIR__ . '/../app/configuration/dep_sentry.php';         /* Sentry Tracing */
 
 
 require __DIR__ . '/../app/configuration/dep_render.php';   /* Dependecies */

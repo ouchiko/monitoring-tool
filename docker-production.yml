@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  apimon-web:
+  train-web:
     volumes:
       - ./src/public:/var/www/html/public
     env_file:
@@ -10,7 +10,7 @@ services:
         - 80:80
     restart: always
 
-  apimon-phpfpm:
+  train-phpfpm:
     volumes:
         - ./src:/var/www/html
     env_file:

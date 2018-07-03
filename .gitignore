@@ -1,0 +1,7 @@
+./store/mysql
+./store/redis
+./store/logs
+store/mysql
+store/logs
+store/redis
+frontend/node_modules

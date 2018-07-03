@@ -1,0 +1,37 @@
+{
+    "name": "hotels-combined",
+    "version": "1.0.0",
+    "description": "Example front end interface to backend hotels service",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babelify": "^8.0.0",
+        "browserify": "^14.5.0",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^7.0.0",
+        "gulp-clean-css": "^3.9.0",
+        "gulp-html-replace": "^1.6.2",
+        "gulp-minify": "^2.1.0",
+        "gulp-sass": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.1",
+        "gulp-uglify": "^3.0.0",
+        "mapbox-gl": "^0.42.2",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^1.1.0"
+    },
+    "babel": {
+        "presets": [
+            "es2015"
+        ]
+    },
+    "dependencies": {
+        "js-base64": "^2.4.5"
+    }
+}

@@ -1,15 +1,15 @@
 version: '2'
 
 services:
-  apimon-web:
+  train-web:
     volumes:
       - ./src/public:/var/www/html/public
     env_file:
         - ./environment/development.env
     ports:
-        - 8083:80
+        - 88:80
 
-  apimon-phpfpm:
+  train-phpfpm:
     volumes:
         - ./src:/var/www/html
     env_file:

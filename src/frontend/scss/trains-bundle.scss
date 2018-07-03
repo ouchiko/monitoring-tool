@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
+$fontFace: "Montserrat";
+
+.center {
+    text-align:center;
+}
+
+.departure-board {
+    margin: 0;
+    padding: 0;
+
+    .container {
+        margin: 50px;
+        .title {
+            font-family: $fontFace;
+            font-size: 25px;
+        }
+        .departure--table {
+            margin-top: 20px;
+            box-sizing: border-box;
+            border: 1px solid #CCC;
+            border-radius: 6px;
+
+            th {
+                padding: 12px;
+                font-family: $fontFace;
+                font-weight: 700;
+                text-align: left;
+            }
+
+            td {
+                padding: 12px;
+                font-family: $fontFace;
+                font-weight: 300;
+            }
+        }
+    }
+}

@@ -8,6 +8,7 @@ class ComposerStaticInit58c4099114d735ead12b76bab60c0be5
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -15,14 +16,14 @@ class ComposerStaticInit58c4099114d735ead12b76bab60c0be5
     );
 
     public static $prefixLengthsPsr4 = array (
+        't' => 
+        array (
+            'trains\\models\\' => 14,
+            'trains\\controllers\\' => 19,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
-        ),
-        'm' => 
-        array (
-            'monitor\\models\\' => 15,
-            'monitor\\controllers\\' => 20,
         ),
         'W' => 
         array (
@@ -30,10 +31,12 @@ class ComposerStaticInit58c4099114d735ead12b76bab60c0be5
         ),
         'T' => 
         array (
+            'Twig\\' => 5,
             'Tests\\' => 6,
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Yaml\\' => 23,
             'Slim\\Views\\' => 11,
             'Slim\\' => 5,
@@ -79,27 +82,35 @@ class ComposerStaticInit58c4099114d735ead12b76bab60c0be5
     );
 
     public static $prefixDirsPsr4 = array (
+        'trains\\models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/trains/models',
+        ),
+        'trains\\controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/trains/controllers',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
-        'monitor\\models\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/monitor/models',
-        ),
-        'monitor\\controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/monitor/controllers',
-        ),
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
         'Symfony\\Component\\Yaml\\' => 
         array (
@@ -108,6 +119,7 @@ class ComposerStaticInit58c4099114d735ead12b76bab60c0be5
         'Slim\\Views\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/php-view/src',
+            1 => __DIR__ . '/..' . '/slim/twig-view/src',
         ),
         'Slim\\' => 
         array (
@@ -172,6 +184,13 @@ class ComposerStaticInit58c4099114d735ead12b76bab60c0be5
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'R' => 
         array (
             'Raven_' => 
